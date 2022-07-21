@@ -1,0 +1,10 @@
+44,mazda,cx7,purple,2012	
+2,ford,focus,white,2015	
+3,subaru,forester,black,2018		
+777,honda,crv,red,2010	
+18,lamborghini,diablo,yellow,2022	
+39,jeep,cherokee,black,2010		
+40,honda,crv,blue,2014	
+41,ford,f150,black,2011		
+31,toyota,camry,black,2015
+15,toyota,rav4,grey,2018,
