@@ -29,14 +29,14 @@ class UsedCar:
         car_info = [self.id, self.make, self.model, self.color, self.year]
         used_car_file = open('UsedCar.txt', 'a')
         for i in car_info:
-            used_car_file.write("%s," % i)
+            used_car_file.write("%s," % i)    # MODIFIED HERE, I want commas instead of tab space
         used_car_file.write("\n")
         used_car_file.close()
         print("Successfully add to the inventory.")
 
 '''|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||'''
 # Inventory/computer class  
-class Inventory():
+class Inventory():  # MODIFIED HERE, if we want old method, just attribute and value, I can align
     def __init__(self, make_s, model_s, color_s, year_s):
         self.make_s = make_s
         self.model_s = model_s

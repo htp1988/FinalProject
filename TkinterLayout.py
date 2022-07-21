@@ -20,7 +20,7 @@ class App(customtkinter.CTk):
     TEXT = ("Roboto Medium", -16)
 
     def __init__(self, root):
-        self.root = root
+        self.root = root    # MODIFIED HERE, set root
         super().__init__()
 
         self.title("Car Application")
@@ -100,20 +100,20 @@ class App(customtkinter.CTk):
 
     def add_car_test(self):
         """ Creates frame for a form containing: Make, model, color, year."""
-        def get_items():
+        def get_items():    # MODIFIED HERE, add the confirmation box
             newCar = UsedCar(random.randint(1, 50),
                              ctk_items[1][0].get(),
                              ctk_items[1][1].get(),
                              ctk_items[1][2].get(),
                              ctk_items[1][3].get())
             confirm = askyesno(title="Confirmation",
-                               message="You are adding %s %s, %s, %s miles?"
+                               message="You are adding %s %s, %s, %s?"
                                        % (ctk_items[1][0].get().upper(), ctk_items[1][1].get().upper(),
                                           ctk_items[1][2].get(), ctk_items[1][3].get())
                                )
             if confirm:
                 res = customtkinter.CTkLabel(root, text="Successfully Added!!!")
-                res.grid(row=10, column=0, columnspan=2)
+                res.grid(row=5, column=1, columnspan=2)
                 newCar.save_to_file()
             else:
                 pass
@@ -150,6 +150,7 @@ class App(customtkinter.CTk):
             ctk_items[1][0].delete(0, customtkinter.END)
             ctk_items[1][1].delete(0, customtkinter.END)
 
+            # For displaying the result table on the new window
             s_frame = tkinter.Toplevel(root)
             s_frame.title("Search Result")
             display_sframe = pt.Table(s_frame, dataframe=returnedSearch, showstatusbar=True, showtoolbar=True)
